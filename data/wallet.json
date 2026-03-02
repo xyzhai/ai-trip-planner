@@ -1,0 +1,19 @@
+{
+  "cards": [
+    {
+      "name": "Amex Platinum",
+      "benefits": ["Fine Hotels & Resorts", "5x on flights", "Lounge Access"],
+      "transfer_partners": ["Marriott", "Delta", "Asia Miles"]
+    },
+    {
+      "name": "Chase Sapphire Reserve",
+      "benefits": ["Priority Pass", "3x on travel", "$300 Travel Credit"],
+      "transfer_partners": ["Hyatt", "United", "British Airways"]
+    }
+  ],
+  "points": {
+    "Amex MR": 150000,
+    "Chase UR": 85000,
+    "Marriott Bonvoy": 40000
+  }
+}
