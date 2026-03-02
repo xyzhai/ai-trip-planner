@@ -1,5 +1,19 @@
+# Secrets
 .env
-__pycache__/
+
+# Virtual Environment (NEVER push this)
 .venv/
+env/
+venv/
+
+# Python artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# uv specific
 .uv/
-*.log
+
+# User-specific / IDE
+.vscode/
+.idea/
