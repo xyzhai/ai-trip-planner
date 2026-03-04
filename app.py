@@ -19,6 +19,22 @@ with st.sidebar:
         else:
             st.warning("Fill all three fields.")
 
+    st.divider()
+    
+    # --- ADDED: Card Sidebar ---
+    st.header("💳 Wallet & Benefits")
+    user_card = st.multiselect(
+        "Primary Travel Card:",
+        [
+            "None", 
+            "Chase Sapphire Preferred", 
+            "Amex Platinum", 
+            "Chase Marriott Bonvoy Boundless", 
+            "Citi AAdvantage Platinum Select", 
+            "Chase IHG Premier"
+        ]
+    )
+
 # --- MAIN CHAT ---
 st.title("🌍 AI Trip Architect")
 
@@ -35,12 +51,19 @@ if prompt := st.chat_input("Plan my trip..."):
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    chat_history = [(m["role"], m["content"]) for m in st.session_state.messages]
+    # In app.py
+    chat_history = []
+    for m in st.session_state.messages:
+        role = "human" if m["role"] == "user" else "ai"
+        chat_history.append((role, m["content"]))
 
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
-            # Call agent with full history
+            # 2. Call agent with the corrected history
             response = run_planner(chat_history)
+            
+            # In v1.0, agent.invoke returns the full state; 
+            # the last message is the answer.
             final_answer = response["messages"][-1].content
             
             st.markdown(final_answer)
