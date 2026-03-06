@@ -57,6 +57,9 @@ if prompt := st.chat_input("Plan my trip..."):
         role = "human" if m["role"] == "user" else "ai"
         chat_history.append((role, m["content"]))
 
+    if user_card != "None":
+            chat_history.append(("system", f"The user is a {user_card} cardholder. Use 'get_card_benefits' for this card and prioritize its perks in the final plan."))
+    
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             # 2. Call agent with the corrected history
