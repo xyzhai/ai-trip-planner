@@ -20,6 +20,7 @@ dependencies = [
     "pandas>=2.2.0",
     "google-search-results>=2.4.2",
     "langgraph>=1.0.0",
+    "sendgrid>=6.12.5",
 ]
 
 [dependency-groups]
