@@ -1,19 +1,30 @@
 {
-  "cards": [
-    {
-      "name": "Amex Platinum",
-      "benefits": ["Fine Hotels & Resorts", "5x on flights", "Lounge Access"],
-      "transfer_partners": ["Marriott", "Delta", "Asia Miles"]
+    "chase sapphire preferred": {
+        "transfer_partners": ["Hyatt (1:1 - Best Value)", "United (1:1)", "British Airways (1:1)"],
+        "redemption_val": "1.25 cents per point via Chase Travel Portal",
+        "perks": ["$50 Annual Hotel Credit", "Primary Rental Car Insurance"],
+        "strategy": "Transfer to Hyatt for high-end stays; use Portal for cheap domestic flights."
     },
-    {
-      "name": "Chase Sapphire Reserve",
-      "benefits": ["Priority Pass", "3x on travel", "$300 Travel Credit"],
-      "transfer_partners": ["Hyatt", "United", "British Airways"]
+    "amex platinum": {
+        "transfer_partners": ["Delta (1:1)", "Hilton (1:2)", "Virgin Atlantic (1:1)"],
+        "redemption_val": "Best value via airline transfers; poor portal value.",
+        "perks": ["$200 Hotel Credit (FHR/HC)", "$200 Airline Fee Credit", "Centurion Lounge Access"],
+        "strategy": "Book 'Fine Hotels + Resorts' to use the $200 credit."
+    },
+    "chase marriott bonvoy boundless": {
+        "loyalty_program": "Marriott Bonvoy",
+        "perks": ["Annual Free Night (up to 35k points)", "Silver Elite Status"],
+        "special_2026_offer": "$100 Airline Statement Credit available through Dec 2026.",
+        "strategy": "Spend $250 on airfare before June 30 to trigger the first $50 credit."
+    },
+    "citi aadvantage platinum select": {
+        "loyalty_program": "American Airlines AAdvantage",
+        "perks": ["First Checked Bag Free (Domestic)", "Preferred Boarding"],
+        "strategy": "Use for domestic AA flights to save on baggage fees."
+    },
+    "chase ihg premier": {
+        "loyalty_program": "IHG One Rewards",
+        "perks": ["4th Night Free on Point Redemptions", "Annual Free Night (up to 40k points)"],
+        "strategy": "Always book in 4-night increments to maximize the discount."
     }
-  ],
-  "points": {
-    "Amex MR": 150000,
-    "Chase UR": 85000,
-    "Marriott Bonvoy": 40000
-  }
 }
